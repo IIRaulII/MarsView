@@ -1,0 +1,152 @@
+.rover-selection-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/marsin.webp');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-white);
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  text-align: center;
+  border-radius: var(--radius-lg);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.app-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+}
+
+.rovers-container {
+  padding: var(--spacing-xl);
+  flex: 1;
+}
+
+.selection-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.loading-message {
+  text-align: center;
+  padding: var(--spacing-xl);
+  font-size: 1.2rem;
+  color: var(--color-gray-medium);
+}
+
+.rover-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rover-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  cursor: pointer;
+}
+
+.rover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.rover-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.rover-info {
+  padding: var(--spacing-lg);
+}
+
+.rover-name {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-dark);
+}
+
+.rover-stats {
+  margin-bottom: var(--spacing-lg);
+}
+
+.rover-stats p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-medium);
+}
+
+/* Estilos para el estado del rover */
+.rover-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.rover-status.active {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: rgb(25, 135, 84);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.rover-status.complete, 
+.rover-status.inactive {
+  background-color: rgba(108, 117, 125, 0.2);
+  color: rgb(73, 80, 87);
+  border: 1px solid rgba(108, 117, 125, 0.3);
+}
+
+.rover-select-btn {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+
+.rover-select-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2.2rem;
+  }
+  
+  .rover-card {
+    max-width: 100%;
+  }
+} 

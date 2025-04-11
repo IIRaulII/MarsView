@@ -1,0 +1,107 @@
+.photo-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 450px;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.photo-card-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.photo-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.photo-card:hover .photo-card-image {
+  transform: scale(1.05);
+}
+
+.photo-card-content {
+  padding: var(--spacing-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.photo-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-card-details {
+  color: var(--color-text-medium);
+  font-size: 0.85rem;
+  margin-bottom: var(--spacing-sm);
+  flex: 1;
+  overflow: hidden;
+}
+
+.photo-card-details p {
+  margin: var(--spacing-xs) 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-card-link {
+  display: inline-block;
+  margin-top: auto;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.photo-card-link:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+  .photo-card {
+    max-height: 380px;
+  }
+
+  .photo-card-image-container {
+    height: 140px;
+  }
+  
+  .photo-card-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .photo-card-title {
+    font-size: 1rem;
+  }
+  
+  .photo-card-details {
+    font-size: 0.8rem;
+  }
+} 

@@ -1,0 +1,142 @@
+.sol-selector {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.sol-label {
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-heading);
+}
+
+.sol-quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.sol-btn {
+  padding: var(--spacing-sm) 0.75rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sol-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sol-btn-quick {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-medium);
+  border: 1px solid var(--color-border);
+  border-color: var(--color-primary);
+}
+
+.sol-btn-quick:hover:not(:disabled) {
+  background-color: var(--color-gray-lighter);
+}
+
+.sol-btn-step {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+}
+
+.sol-btn-step:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.sol-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.sol-step-buttons {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.sol-input-form {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.sol-input {
+  width: 80px;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  text-align: right;
+}
+
+.sol-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 92, 53, 0.25);
+}
+
+.sol-max {
+  color: var(--color-text-light);
+  margin-left: var(--spacing-xs);
+  font-size: 0.9rem;
+}
+
+.sol-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+}
+
+.sol-info-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sol-info-label {
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.sol-info-value {
+  color: var(--color-text-medium);
+}
+
+@media (max-width: 768px) {
+  .sol-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-md);
+  }
+  
+  .sol-step-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sol-input-form {
+    margin: var(--spacing-sm) 0;
+    justify-content: center;
+  }
+  
+  .sol-quick-buttons {
+    justify-content: center;
+  }
+} 
