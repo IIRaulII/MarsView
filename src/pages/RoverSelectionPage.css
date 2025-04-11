@@ -53,7 +53,7 @@
 .rover-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -65,7 +65,7 @@
   box-shadow: var(--shadow-md);
   overflow: hidden;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   cursor: pointer;
 }
@@ -76,38 +76,39 @@
 }
 
 .rover-image {
-  height: 250px;
+  height: 200px;
   background-size: cover;
   background-position: center;
 }
 
 .rover-info {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
 }
 
 .rover-name {
-  font-size: 1.8rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
   color: var(--color-text-dark);
 }
 
 .rover-stats {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
 }
 
 .rover-stats p {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 0.3rem;
   color: var(--color-text-medium);
+  font-size: 0.9rem;
 }
 
 /* Estilos para el estado del rover */
 .rover-status {
   display: inline-block;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 0.8em;
   font-weight: 500;
-  margin-left: 5px;
+  margin-left: 3px;
 }
 
 .rover-status.active {
@@ -127,14 +128,14 @@
   background-color: var(--color-primary);
   color: var(--color-text-white);
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border-radius: var(--radius-pill);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color var(--transition-fast);
   width: 100%;
-  margin-top: var(--spacing-md);
+  margin-top: var(--spacing-sm);
 }
 
 .rover-select-btn:hover {
